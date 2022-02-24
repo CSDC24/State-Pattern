@@ -11,7 +11,7 @@ public class Annoyed implements State {
 
     @Override
     public void annoy(Context context) {
-        System.out.println("Boyfriend is annoyed");
+        System.out.println("You are annoying your Boyfriend");
         context.setState(this);
     }
 

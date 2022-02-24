@@ -7,7 +7,7 @@ public class Neutral implements State {
 
     @Override
     public void drinkBeer(Context context) {
-        System.out.println("Boyfriend is drinking");
+        System.out.println("Your Boyfriend is drinking");
         context.setState(this);
     }
 

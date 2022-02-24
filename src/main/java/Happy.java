@@ -2,7 +2,7 @@ public class Happy implements State{
 
     @Override
     public void giveKiss(Context context) {
-        System.out.println("Boyfriend is kissing");
+        System.out.println("You are kissing your Boyfriend");
         context.setState(this);
     }
 
