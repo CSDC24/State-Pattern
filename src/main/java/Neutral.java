@@ -1,22 +1,22 @@
 public class Neutral implements State {
 
     @Override
-    public void giveKiss() {
+    public void giveKiss(Context context) {
 
     }
 
     @Override
-    public void shareBeer() {
-
+    public void drinkBeer(Context context) {
+        System.out.println("Boyfriend is drinking");
+        context.setState(this);
     }
 
     @Override
-    public void drinkBeer() {
-
+    public void annoy(Context context) {
     }
 
     @Override
-    public void annoy() {
-
+    public String toString() {
+        return "Neutral";
     }
 }

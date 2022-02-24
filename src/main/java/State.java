@@ -1,10 +1,8 @@
 public interface State {
 
-    public void giveKiss();
+    void giveKiss(Context context);
 
-    public void shareBeer();
+    void drinkBeer(Context context);
 
-    public void drinkBeer();
-
-    public void annoy();
+    void annoy(Context context);
 }

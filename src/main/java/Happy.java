@@ -1,22 +1,23 @@
 public class Happy implements State{
 
     @Override
-    public void giveKiss() {
+    public void giveKiss(Context context) {
+        System.out.println("Boyfriend is kissing");
+        context.setState(this);
+    }
+
+    @Override
+    public void drinkBeer(Context context) {
 
     }
 
     @Override
-    public void shareBeer() {
+    public void annoy(Context context) {
 
     }
 
     @Override
-    public void drinkBeer() {
-
-    }
-
-    @Override
-    public void annoy() {
-
+    public String toString() {
+        return "Happy";
     }
 }
