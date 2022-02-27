@@ -14,9 +14,4 @@ public class Neutral implements Mood {
     public void annoy() {
         System.out.println("Now I'm drunk and annoyed.");
     }
-
-    @Override
-    public String toString() {
-        return "Neutral";
-    }
 }

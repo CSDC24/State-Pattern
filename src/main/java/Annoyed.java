@@ -14,9 +14,4 @@ public class Annoyed implements Mood {
     public void annoy() {
         System.out.println("I'm still annoyed");
     }
-
-    @Override
-    public String toString() {
-        return "Annoyed";
-    }
 }

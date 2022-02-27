@@ -15,8 +15,4 @@ public class Happy implements Mood {
         System.out.println("You ruined the mood");
     }
 
-    @Override
-    public String toString() {
-        return "Happy";
-    }
 }
