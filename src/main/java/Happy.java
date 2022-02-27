@@ -1,19 +1,18 @@
-public class Happy implements State{
+public class Happy implements Mood {
 
     @Override
-    public void giveKiss(Context context) {
-        System.out.println("You are kissing your Boyfriend");
-        context.setState(this);
+    public void giveKiss() {
+        System.out.println("Thank you! <3");
     }
 
     @Override
-    public void drinkBeer(Context context) {
-
+    public void drinkBeer() {
+        System.out.println("That's refreshing");
     }
 
     @Override
-    public void annoy(Context context) {
-
+    public void annoy() {
+        System.out.println("You ruined the mood");
     }
 
     @Override

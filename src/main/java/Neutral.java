@@ -1,18 +1,18 @@
-public class Neutral implements State {
+public class Neutral implements Mood {
 
     @Override
-    public void giveKiss(Context context) {
-
+    public void giveKiss() {
+        System.out.println("Thank you for the kiss!");
     }
 
     @Override
-    public void drinkBeer(Context context) {
-        System.out.println("Your Boyfriend is drinking");
-        context.setState(this);
+    public void drinkBeer() {
+        System.out.println("Yes! Beer!");
     }
 
     @Override
-    public void annoy(Context context) {
+    public void annoy() {
+        System.out.println("Now I'm drunk and annoyed.");
     }
 
     @Override

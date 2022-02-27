@@ -1,24 +1,23 @@
 public class Boyfriend {
 
-    public static void main(String[] args) {
-        Context context = new Context();
+    private Mood mood;
 
-        Neutral neutral = new Neutral();
-        neutral.drinkBeer(context);
-        printState(context);
-
-        Happy happy = new Happy();
-        happy.giveKiss(context);
-        printState(context);
-
-        Annoyed annoyed = new Annoyed();
-        annoyed.annoy(context);
-        printState(context);
-
+    public void drinkBeer(){
+        mood.drinkBeer();
+    }
+    public void giveKiss(){
+        mood.giveKiss();
+    }
+    public void annoy(){
+        mood.annoy();
     }
 
-    private static void printState(Context context) {
-        System.out.println("The state changed to: " + context.getState().toString());
+    public void setCurrentMood(Mood mood) {
+        this.mood = mood;
+    }
+
+    public Mood getCurrentMood() {
+        return mood;
     }
 
 }
