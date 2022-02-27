@@ -6,14 +6,17 @@ public class Main {
         boyfriend.setCurrentMood(new Neutral());
         boyfriend.giveKiss();
         boyfriend.drinkBeer();
+        boyfriend.annoy();
 
         boyfriend.setCurrentMood(new Annoyed());
         boyfriend.giveKiss();
         boyfriend.drinkBeer();
+        boyfriend.annoy();
 
         boyfriend.setCurrentMood(new Happy());
         boyfriend.giveKiss();
         boyfriend.drinkBeer();
+        boyfriend.annoy();
     }
 
 }
