@@ -11,7 +11,7 @@ public class TestMoodWhenGivingKisses {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
-    private final Boyfriend boyfriend = new Boyfriend();
+    private final Boyfriend boyfriend = new Boyfriend(new Neutral());
 
     @BeforeEach
     public void setUpStreams() {

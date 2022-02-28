@@ -1,17 +1,20 @@
 public class Neutral implements Mood {
 
     @Override
-    public void giveKiss() {
+    public Mood giveKiss() {
         System.out.println("Thank you for the kiss!");
+        return new Happy();
     }
 
     @Override
-    public void drinkBeer() {
+    public Mood drinkBeer() {
         System.out.println("Yes! Beer!");
+        return this;
     }
 
     @Override
-    public void annoy() {
+    public Mood annoy() {
         System.out.println("Now I'm drunk and annoyed.");
+        return new Annoyed();
     }
 }

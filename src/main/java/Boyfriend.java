@@ -2,14 +2,20 @@ public class Boyfriend {
 
     private Mood mood;
 
-    public void drinkBeer(){
-        mood.drinkBeer();
+    public Boyfriend(Neutral initialMood){
+        this.mood = initialMood;
     }
+
     public void giveKiss(){
-        mood.giveKiss();
+        this.mood = this.mood.giveKiss();
     }
+
     public void annoy(){
-        mood.annoy();
+        this.mood = this.mood.annoy();
+    }
+
+    public void drinkBeer(){
+        this.mood = this.mood.drinkBeer();
     }
 
     public void setCurrentMood(Mood mood) {
