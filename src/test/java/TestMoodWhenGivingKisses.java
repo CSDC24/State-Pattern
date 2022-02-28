@@ -33,7 +33,7 @@ public class TestMoodWhenGivingKisses {
     }
 
     @Test
-    void boyfriendIsRejectsTheKissWhenAnnoyed() {
+    void boyfriendRejectsTheKissWhenAnnoyed() {
         boyfriend.setCurrentMood(new Annoyed());
 
         boyfriend.giveKiss();
