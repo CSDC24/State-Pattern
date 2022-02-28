@@ -18,10 +18,6 @@ public class Boyfriend {
         this.mood = this.mood.drinkBeer();
     }
 
-    public void setCurrentMood(Mood mood) {
-        this.mood = mood;
-    }
-
     public Mood getCurrentMood() {
         return mood;
     }
