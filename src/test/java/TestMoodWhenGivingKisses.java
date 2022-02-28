@@ -7,11 +7,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class TestMoodsWhenGivingKisses {
+public class TestMoodWhenGivingKisses {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
-    private Boyfriend boyfriend = new Boyfriend();
+    private final Boyfriend boyfriend = new Boyfriend();
 
     @BeforeEach
     public void setUpStreams() {
@@ -24,7 +24,7 @@ public class TestMoodsWhenGivingKisses {
     }
 
     @Test
-    void boyfriendThanksForTheKissWhenFeelingNeutral() {
+    void boyfriendThanksForTheKissWhenNeutral() {
         boyfriend.setCurrentMood(new Neutral());
 
         boyfriend.giveKiss();
@@ -33,7 +33,7 @@ public class TestMoodsWhenGivingKisses {
     }
 
     @Test
-    void boyfriendIsRejectsKissWhenAnnoyed() {
+    void boyfriendIsRejectsTheKissWhenAnnoyed() {
         boyfriend.setCurrentMood(new Annoyed());
 
         boyfriend.giveKiss();
@@ -42,7 +42,7 @@ public class TestMoodsWhenGivingKisses {
     }
 
     @Test
-    void boyfriendIsVeryThankfulAboutKissWhenHappy() {
+    void boyfriendIsVeryThankfulForTheKissWhenHappy() {
         boyfriend.setCurrentMood(new Happy());
 
         boyfriend.giveKiss();
