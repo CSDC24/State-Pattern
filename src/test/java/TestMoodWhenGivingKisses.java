@@ -25,8 +25,6 @@ public class TestMoodWhenGivingKisses {
 
     @Test
     void boyfriendThanksForTheKissWhenNeutral() {
-        boyfriend.setCurrentMood(new Neutral());
-
         boyfriend.giveKiss();
 
         assertEquals("Thank you for the kiss!\n", outContent.toString());
@@ -34,7 +32,8 @@ public class TestMoodWhenGivingKisses {
 
     @Test
     void boyfriendRejectsTheKissWhenAnnoyed() {
-        boyfriend.setCurrentMood(new Annoyed());
+        boyfriend.annoy();
+        outContent.reset();
 
         boyfriend.giveKiss();
 
@@ -43,7 +42,8 @@ public class TestMoodWhenGivingKisses {
 
     @Test
     void boyfriendIsVeryThankfulForTheKissWhenHappy() {
-        boyfriend.setCurrentMood(new Happy());
+        boyfriend.giveKiss();
+        outContent.reset();
 
         boyfriend.giveKiss();
 
@@ -52,8 +52,6 @@ public class TestMoodWhenGivingKisses {
 
     @Test
     void moodChangesToAnnoy() {
-        boyfriend.setCurrentMood(new Happy());
-
         boyfriend.annoy();
 
         assertEquals(Annoyed.class, this.boyfriend.getCurrentMood().getClass());
