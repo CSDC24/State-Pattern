@@ -29,7 +29,7 @@ public class TestMoodWhenGivingKisses {
 
         boyfriend.giveKiss();
 
-       assertEquals("Thank you for the kiss!\n", outContent.toString());
+        assertEquals("Thank you for the kiss!\n", outContent.toString());
     }
 
     @Test
@@ -48,5 +48,14 @@ public class TestMoodWhenGivingKisses {
         boyfriend.giveKiss();
 
         assertEquals("Thank you! <3\n", outContent.toString());
+    }
+
+    @Test
+    void moodChangesToAnnoy() {
+        boyfriend.setCurrentMood(new Happy());
+
+        boyfriend.annoy();
+
+        assertEquals(Annoyed.class, this.boyfriend.getCurrentMood().getClass());
     }
 }
